@@ -1,0 +1,13 @@
+rdkit
+scipy
+plotly
+opencv-python-headless
+argparse
+numpy
+cirpy
+svglib
+reportlab
+pdf2image
+streamlit
+kaleido
+requests
