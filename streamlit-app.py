@@ -12,9 +12,7 @@ from streamlit_lottie import st_lottie
 
 # setting header, description and citation
 st.set_page_config(page_title="Molecule visualiser ⚛️")
-st.header('''
-    ⚛️ molecule visualiser!
-    ''')
+
 
 # --- Splash Animation ---
 def load_lottiefile(filepath):
@@ -33,6 +31,9 @@ if st.session_state.show_intro:
         time.sleep(3)
     splash.empty()
     st.session_state.show_intro = False
+
+# header
+st.header('''⚛️ molecule visualiser''')
 
 # set background
 def set_local_background(image_file):
@@ -92,7 +93,7 @@ This is a molecule visualiser app built with Streamlit and RDKit. this app has f
 - ⚙️ Built with: Streamlit + RD-kit
 - 📚 Molecular data by: cirpy + rdkit
 - 🖼️ Animation by: LottieFiles
-- 🧠 GITHUB:[Source code]()
+- 🧠 GITHUB:[Source code](https://github.com/anshk1234/molecule-visualiser)
 - 📧 contact: [Email](anshkunwar3009@gmail.com)                  
 - 🌐 see other projects: [streamlit.io/ansh kunwar](https://share.streamlit.io/user/anshk1234)
 - I'm a student and I enjoy working on my ideas and projects in my free time.[about me and my projects](https://portfolio-drv5jcbigqmnmfbztvk3ng.streamlit.app/)                 
@@ -701,3 +702,4 @@ if __name__ == "__main__":
 
 # ---- Footer ----
 st.markdown("<p style='text-align:center; color:white;'>© 2025 Molecule Visualiser | Powered by RD-kit </p>", unsafe_allow_html=True)
+
