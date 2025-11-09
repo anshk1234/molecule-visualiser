@@ -8,6 +8,98 @@ import json
 import os
 import shutil
 import time
+from streamlit_lottie import st_lottie
+
+# setting header, description and citation
+st.set_page_config(page_title="Molecule visualiser ⚛️")
+st.header('''
+    ⚛️ molecule visualiser!
+    ''')
+
+# --- Splash Animation ---
+def load_lottiefile(filepath):
+    with open(filepath, "r", encoding="utf-8") as f:
+        return json.load(f)
+
+if "show_intro" not in st.session_state:
+    st.session_state.show_intro = True
+
+if st.session_state.show_intro:
+    lottie_intro = load_lottiefile("atoms animation.json")
+    splash = st.empty()
+    with splash.container():
+        st.markdown("<h1 style='text-align:center;'>Welcome to Molecule Visualiser!</h1>", unsafe_allow_html=True)
+        st_lottie(lottie_intro, height=280, speed=0.5, loop=True)
+        time.sleep(3)
+    splash.empty()
+    st.session_state.show_intro = False
+
+# set background
+def set_local_background(image_file):
+    with open(image_file, "rb") as img:
+        encoded = base64.b64encode(img.read()).decode()
+    css = f"""
+    <style>
+    html, body, .stApp {{
+        background-image: url("data:image/jpg;base64,{encoded}");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+    }}
+    [data-testid="stAppViewContainer"],
+    [data-testid="stHeader"],
+    [data-testid="stToolbar"],
+    [data-testid="stVerticalBlock"],
+    .main, .block-container,
+    .css-1d391kg, .css-18ni7ap {{
+        background: transparent !important;
+    }}
+    section[data-testid="stSidebar"] {{
+        background-color: rgba(255, 255, 255, 0.08) !important;
+        backdrop-filter: blur(12px);
+        box-shadow: inset 0 0 10px #00ffff60, 0 0 20px #00ffff88;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+    }}
+    section[data-testid="stSidebar"] * {{
+        background-color: transparent !important;
+    }}
+    </style>
+    <div id="inspo-quote"></div>
+    """
+    st.markdown(css, unsafe_allow_html=True)
+
+set_local_background("structure.jpg")
+    
+
+
+#sidebar
+with st.sidebar:
+
+    st.sidebar.title("About this App...")
+st.sidebar.markdown("""
+  
+This is a molecule visualiser app built with Streamlit and RDKit. this app has feature that allows you to visualise atoms and molecules in 2D and 3D .
+                    
+**Features:**
+- Visualise molecules in 2D and 3D
+- Customise atom colors and sizes
+- Download images in various formats (PNG, SVG, JPEG, PDF)
+- Save and load custom settings for future use
+                                        
+**Credits:**  
+- 👨‍💻 Developed and Designed by: Ansh Kunwar   
+- ⚙️ Built with: Streamlit + RD-kit
+- 📚 Molecular data by: cirpy + rdkit
+- 🖼️ Animation by: LottieFiles
+- 🧠 GITHUB:[Source code]()
+- 📧 contact: [Email](anshkunwar3009@gmail.com)                  
+- 🌐 see other projects: [streamlit.io/ansh kunwar](https://share.streamlit.io/user/anshk1234)
+- I'm a student and I enjoy working on my ideas and projects in my free time.[about me and my projects](https://portfolio-drv5jcbigqmnmfbztvk3ng.streamlit.app/)                 
+        
+    © 2025 MOLECULE VISUALISER
+                    """)
+
 
 # brute force approach to avoid decompression bomb warning by pdf2image and PIL
 from PIL import Image
@@ -113,18 +205,7 @@ if __name__ == "__main__":
         st.session_state['reset_size'] = False
     last_atom_size = st.session_state['last_atom_size_but']
 
-    # setting header, description and citation
-    st.set_page_config(page_title="Molecule visualiser ⚛️")
-    st.header('''
-    ⚛️ molecule visualiser!
-    ''')
-    st.write('''
-    Generate icons,structure and visualise in 2D and 3D modes of molecules.''')
-    st.markdown('''
-For more options and information, check out the 
-[GitHub repository](https://github.com/anshk1234/molecule-visualiser).\
-       ''')
-    st.markdown("Made by [ANSH](https://share.streamlit.io/user/anshk1234/)")
+    
     # select the input type
     input_type = st.selectbox("Create your structure by",
                               ['name of compound', 'smiles', 'load file', 'cas_number', 'stdinchi', 'stdinchikey', 'smiles list'],
@@ -613,9 +694,10 @@ For more options and information, check out the
                     so you can easily reload them in you refresh the page!'''
         )
 
-    # donate
-    st.markdown("""I'm a student and I enjoy working on my ideas and projects in my free time.
-                [about me and my projects](https://portfolio-drv5jcbigqmnmfbztvk3ng.streamlit.app/)""")
- 
-    st.write('For help or feedback, contact on anshkunwar3009@gmail.com')
-    st.write('Made with 💙 by ANSH')
+    
+
+
+
+
+# ---- Footer ----
+st.markdown("<p style='text-align:center; color:white;'>© 2025 Molecule Visualiser | Powered by RD-kit </p>", unsafe_allow_html=True)
