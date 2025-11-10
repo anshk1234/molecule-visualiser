@@ -97,7 +97,8 @@ This is a molecule visualiser app built with Streamlit and RDKit. this app has f
 - 📧 contact: anshkunwar3009@gmail.com                  
 - 🌐 see other projects: [streamlit.io/ansh kunwar](https://share.streamlit.io/user/anshk1234)
 - I'm a student and I enjoy working on my ideas and projects in my free time.[about me and my projects](https://portfolio-drv5jcbigqmnmfbztvk3ng.streamlit.app/)                 
-        
+- Licensed under MIT .
+
     © 2025 MOLECULE VISUALISER
                     """)
 
@@ -702,4 +703,5 @@ if __name__ == "__main__":
 
 # ---- Footer ----
 st.markdown("<p style='text-align:center; color:white;'>© 2025 Molecule Visualiser | Powered by RD-kit </p>", unsafe_allow_html=True)
+
 
