@@ -315,13 +315,13 @@ if __name__ == "__main__":
         if dimension == '3D interactive':  # plotly doesn't support saving plot in pdf from the camera
             formats = ('svg', 'png', 'jpeg')
         else:
-            formats = ('png', 'svg', 'jpeg', 'pdf')
-        forms = [False, False, False, False]
+            formats = ('svg', 'jpeg', 'pdf')
+        forms = [False, False, False]
         img_format = st.selectbox('Download file format:', formats, key='img_format',
-                                  help="""The native file format is svg. Using png and jpeg formats could slow down 
+                                  help="""The native file format is svg. Using jpeg formats could slow down 
                                        the app""")
         if dimension != '3D interactive':
-            for ind, img_form in enumerate(('png', 'svg', 'jpeg', 'pdf')):
+            for ind, img_form in enumerate(('svg', 'jpeg', 'pdf')):
                 if img_form == img_format:
                     forms[ind] = True
 
@@ -702,5 +702,6 @@ if __name__ == "__main__":
 
 # ---- Footer ----
 st.markdown("<p style='text-align:center; color:white;'>© 2025 Molecule Visualiser | Powered by RD-kit </p>", unsafe_allow_html=True)
+
 
 
