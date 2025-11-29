@@ -99,9 +99,10 @@ This is a molecule visualiser app built with Streamlit and RDKit. this app has f
 - I'm a student and I enjoy working on my ideas and projects in my free time.[about me and my projects](https://portfolio-drv5jcbigqmnmfbztvk3ng.streamlit.app/)                 
 - Licensed under MIT .
 
-    © 2025 MOLECULE VISUALISER
+    
                     """)
-
+st.sidebar.markdown("<br><center>© 2025 Molecule Visualiser</center>", unsafe_allow_html=True)
+ 
 
 # brute force approach to avoid decompression bomb warning by pdf2image and PIL
 from PIL import Image
@@ -703,5 +704,6 @@ if __name__ == "__main__":
 
 # ---- Footer ----
 st.markdown("<p style='text-align:center; color:white;'>© 2025 Molecule Visualiser | Powered by RD-kit </p>", unsafe_allow_html=True)
+
 
 
