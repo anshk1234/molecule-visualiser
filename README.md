@@ -63,7 +63,7 @@ python -m streamlit run streamlit_app.py
 
 ## License
 
-Code is licensed under the MIT License  ([MIT licence](https://github.com/anshk1234/molecule-visualiser/blob/main/LICENSE))
+Code is licensed under the MIT License 
 
-[![License: GPL-3.0](https://img.shields.io/badge/License-MIT%20v3-lightgrey.svg)](https://github.com/anshk1234/molecule-visualiser/blob/main/LICENSE)
+[![License: GPL-3.0](https://img.shields.io/badge/License-MIT%20-lightgrey.svg)](https://github.com/anshk1234/molecule-visualiser/blob/main/LICENSE)
 
