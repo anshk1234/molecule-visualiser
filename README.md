@@ -7,7 +7,7 @@ The atoms' colours are inspired by the [CPK colouring convention](https://scienc
 
 ## Try the web app:
 
-[Molecules-icons generator web app](https://atoms-molecule-visualiser.streamlit.app/) powered by streamlit
+[Molecule-visualiser](https://atoms-molecule-visualiser.streamlit.app/) powered by streamlit
 
 [![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://atoms-molecule-visualiser.streamlit.app/)
 
@@ -25,7 +25,7 @@ Lucandia. Lucandia/Molecule-Icon-Generator; Zenodo, 2022. https://doi.org/10.528
 ### Step 1: clone the repository
 
 ```
-git clone https://github.com/lmonari5/molecule-visualiser.git
+git clone https://github.com/anshk1234/molecule-visualiser.git
 ```
 
 ### Step 2: install packages and requirements
