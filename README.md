@@ -69,7 +69,4 @@ Code is licensed under the MIT License
 
 ---
 
-## Star History ⭐
-
-[![Star History Chart](https://api.star-history.com/svg?repos=anshk1234/molecule-visualiser&type=date&legend=top-left)](https://www.star-history.com/#anshk1234/molecule-visualiser&type=date&legend=top-left)
 
