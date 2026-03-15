@@ -67,3 +67,9 @@ Code is licensed under the MIT License
 
 [![License: GPL-3.0](https://img.shields.io/badge/License-MIT%20-lightgrey.svg)](https://github.com/anshk1234/molecule-visualiser/blob/main/LICENSE)
 
+---
+
+## Star History ⭐
+
+[![Star History Chart](https://api.star-history.com/svg?repos=anshk1234/molecule_visualiser&type=date&legend=top-left)](https://www.star-history.com/#anshk1234/molecule_visualiser&type=date&legend=top-left)
+
